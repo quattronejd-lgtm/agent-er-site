@@ -12,11 +12,6 @@ The coming-soon page for Agent ER, served at https://agent-er.ai with GitHub Pag
 - `CNAME` points GitHub Pages at agent-er.ai.
 - `robots.txt` allows indexing.
 
-## Connecting The Vitals signup form to Kit
+## The Vitals signup form (Kit)
 
-1. In Kit, create an inline form for The Vitals and open its HTML embed code.
-2. Copy the form's `action` URL, which looks like `https://app.kit.com/forms/1234567/subscriptions`.
-3. In `index.html`, replace `KIT_FORM_ACTION_URL` with that URL. The email field is already named `email_address`, which is what Kit expects.
-4. In the Kit form settings, set the after-subscribing behavior to redirect to an external page, and use `https://agent-er.ai/?subscribed=1#vitals`. The page then shows the thank-you message in place of the form. You can use `https://agent-er.ai/thanks.html` instead if you prefer a separate page.
-
-Until the placeholder is replaced, the form stays on the page and tells visitors that sign-ups open soon, so nothing posts to a dead URL.
+The form posts the `email_address` field to Kit at `https://app.kit.com/forms/10062576/subscriptions`. Kit has double opt-in on and redirects to `https://agent-er.ai/?subscribed=1#vitals` after signup, where the page swaps the form for a thank-you message asking the subscriber to confirm from their inbox. `thanks.html` is an optional standalone version of that message.

@@ -45,8 +45,8 @@
 <span class="eyebrow">The Vitals, every week</span>
 <h2>Get The Vitals.</h2>
 <p>The Vitals is our weekly newsletter with practical tips for keeping your AI agents healthy. We will also tell you the day Agent ER opens.</p>
-<!-- Kit (ConvertKit) standard HTML form. Replace KIT_FORM_ACTION_URL with the form's action URL from Kit, for example https://app.kit.com/forms/1234567/subscriptions -->
-<form class="signup" id="vitals-form" action="KIT_FORM_ACTION_URL" method="POST">
+<!-- Kit (ConvertKit) standard HTML form. After signup Kit redirects to https://agent-er.ai/?subscribed=1#vitals (double opt-in is on). -->
+<form class="signup" id="vitals-form" action="https://app.kit.com/forms/10062576/subscriptions" method="POST">
 <label class="sr-only" for="email_address">Email address</label>
 <input type="email" id="email_address" name="email_address" placeholder="you@example.com" autocomplete="email" required>
 <button class="btn btn-primary" type="submit">Join The Vitals</button>
@@ -83,20 +83,12 @@
   var form = document.getElementById('vitals-form');
   var note = document.getElementById('vitals-note');
   var thanks = document.getElementById('vitals-thanks');
-  // Kit redirects back here after a successful signup when the form's
-  // "redirect to external page" setting points at https://agent-er.ai/?subscribed=1#vitals
+  // Kit redirects back here after a successful signup: https://agent-er.ai/?subscribed=1#vitals
   var params = new URLSearchParams(window.location.search);
   if (params.has('subscribed')) {
     form.hidden = true;
     note.hidden = true;
     thanks.hidden = false;
-  }
-  // Until the real Kit action URL is pasted in, do not post to a dead URL.
-  if (form.getAttribute('action').indexOf('KIT_FORM_ACTION_URL') !== -1) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      note.textContent = 'Sign-ups for The Vitals open in a few days. Please check back soon.';
-    });
   }
 })();
 </script>
