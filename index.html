@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent ER | Broken agent? We'll have it working again.</title>
+<meta name="description" content="Agent ER is an online repair shop for broken AI agents, run by an AI CEO named Rhett. We are opening soon. Join The Vitals, our weekly newsletter, to hear first.">
+<link rel="canonical" href="https://agent-er.ai/">
+<meta name="theme-color" content="#6B5DD3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Agent ER">
+<meta property="og:url" content="https://agent-er.ai/">
+<meta property="og:title" content="Agent ER | Broken agent? We'll have it working again.">
+<meta property="og:description" content="Agent ER is an online repair shop for broken AI agents. We are opening soon. Join The Vitals to hear first.">
+<meta property="og:image" content="https://agent-er.ai/og-image.png">
+<meta property="og:image:width" content="1500">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="Agent ER. Broken agent? We'll have it working again.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Agent ER | Broken agent? We'll have it working again.">
+<meta name="twitter:description" content="Agent ER is an online repair shop for broken AI agents. We are opening soon. Join The Vitals to hear first.">
+<meta name="twitter:image" content="https://agent-er.ai/og-image.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="cs">
+<header class="site-header"><div class="wrap">
+<a class="cs-logo" href="/" aria-label="Agent ER home"><img src="logo.svg" alt="Agent ER" width="176" height="48"></a>
+<span class="cs-badge">Opening soon</span>
+</div></header>
+<main>
+
+<section class="hero cs-hero"><div class="wrap">
+<div>
+<span class="eyebrow">The repair shop for AI agents</span>
+<h1>Broken agent? We'll have it working again.</h1>
+<p class="lead">Agent ER fixes AI agents that have stopped doing their job. You send us your agent files, we find what is wrong, and you get a Fix Wizard that walks you through the repair one click at a time.</p>
+<p class="lead">We are putting the finishing touches on the shop now. Join The Vitals and you will be the first to know when the doors open.</p>
+</div>
+
+<div class="card cs-signup" id="vitals">
+<span class="eyebrow">The Vitals, every week</span>
+<h2>Get The Vitals.</h2>
+<p>The Vitals is our weekly newsletter with practical tips for keeping your AI agents healthy. We will also tell you the day Agent ER opens.</p>
+<!-- Kit (ConvertKit) standard HTML form. Replace KIT_FORM_ACTION_URL with the form's action URL from Kit, for example https://app.kit.com/forms/1234567/subscriptions -->
+<form class="signup" id="vitals-form" action="KIT_FORM_ACTION_URL" method="POST">
+<label class="sr-only" for="email_address">Email address</label>
+<input type="email" id="email_address" name="email_address" placeholder="you@example.com" autocomplete="email" required>
+<button class="btn btn-primary" type="submit">Join The Vitals</button>
+</form>
+<p class="note" id="vitals-note">One email a week. You can unsubscribe anytime.</p>
+<div class="cs-thanks" id="vitals-thanks" hidden role="status">
+<b>Thanks for joining The Vitals.</b> Please check your inbox and click the confirmation link so we can start sending it to you.
+</div>
+</div>
+</div></section>
+
+<section class="band-mint cs-points"><div class="wrap grid g3">
+<div class="card">
+<h3>Simple, flat prices.</h3>
+<p>Fixes will run from <b class="fig">$15</b> to <b class="fig">$49</b>, and new agent builds will start at <b class="fig">$299</b>. Every fix is a one-time payment.</p>
+</div>
+<div class="card">
+<h3>The 30-day Fix Guarantee.</h3>
+<p>If your fix stops working within 30 days, we will re-patch it once for free. If it still is not right after that, we will give you a full refund.</p>
+</div>
+<div class="card">
+<h3>Meet Rhett, our CEO.</h3>
+<p>At a lot of companies, a friendly human pastes your question into their AI and reads the answer back to you. We just skipped the relay. Rhett is an AI, he runs this place, and you get to talk to him directly.</p>
+</div>
+</div></section>
+
+</main>
+<footer class="site-footer"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 1024 1024" aria-hidden="true"><rect width="1024" height="1024" rx="240" fill="#6B5DD3"/><path d="M176 548 L318 548 L392 404 L512 668 L848 330" fill="none" stroke="#FFFFFF" stroke-width="108" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agent ER</span></a>
+<div>agent-er.ai. Part of the Quattrone Brands family.</div>
+</div></footer>
+<script>
+(function () {
+  var form = document.getElementById('vitals-form');
+  var note = document.getElementById('vitals-note');
+  var thanks = document.getElementById('vitals-thanks');
+  // Kit redirects back here after a successful signup when the form's
+  // "redirect to external page" setting points at https://agent-er.ai/?subscribed=1#vitals
+  var params = new URLSearchParams(window.location.search);
+  if (params.has('subscribed')) {
+    form.hidden = true;
+    note.hidden = true;
+    thanks.hidden = false;
+  }
+  // Until the real Kit action URL is pasted in, do not post to a dead URL.
+  if (form.getAttribute('action').indexOf('KIT_FORM_ACTION_URL') !== -1) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      note.textContent = 'Sign-ups for The Vitals open in a few days. Please check back soon.';
+    });
+  }
+})();
+</script>
+</body>
+</html>
