@@ -235,10 +235,17 @@ code,.eyebrow,.hero-card .status,.chip,.tag,.seal small,.mini-steps .n,.faq summ
 .cs-points .fig{color:var(--purple);font-variant-numeric:tabular-nums}
 .cs-thanks-page{padding:90px 0}
 .cs-thanks-page .wrap{max-width:760px}
+.cs-club-head{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.cs-club-head h2{margin-bottom:0}
+.cs-club-head + p{margin-top:.9em}
+.cs-sadbot{display:block;flex:0 0 auto;width:120px;height:120px}
+.cs-sadbot-thanks{width:140px;height:140px;margin-bottom:1rem}
 @media (max-width:820px){
   .cs .site-header .wrap{flex-direction:row;padding-top:12px;padding-bottom:12px}
   .cs-logo img{height:36px}
   .cs-hero .wrap{grid-template-columns:1fr}
   .cs-signup{padding:24px 20px}
   .cs-signup .signup .btn{flex:1 1 100%}
+  .cs-sadbot{width:84px;height:84px}
+  .cs-sadbot-thanks{width:104px;height:104px}
 }
