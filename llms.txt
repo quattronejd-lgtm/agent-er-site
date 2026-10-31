@@ -1,0 +1,29 @@
+# Agent ER
+
+> Agent ER (https://agent-er.ai) is an online repair shop for AI agents that have drifted or broken, such as custom GPTs, Claude projects, n8n or Zapier automations, and AI assistants. It also builds new agents. It serves non-technical small business owners, coaches, creators, marketers, and financial advisors. Customers upload their agent files and receive a Fix Wizard that walks them through the repair.
+
+## Prices
+- Virtual Cloud Fix: $15, for an agent in a hosted or cloud workspace such as a custom GPT or Claude project.
+- Terminal Fix: $25, for an agent that runs from the command line.
+- Local Agent Fix: $35, for an agent that runs locally from a folder of prompts and files.
+- Harness Fix: $42, for an agent that runs inside a harness.
+- Repo Fix: $49, for an agent that lives in a code repository.
+- Starter Build: $299, a ready-to-use agent inside Claude, a custom GPT, or Cursor.
+- Custom Build: $599, a scheduled agent with three to five integrations.
+- Vitals Checkup: monthly monitoring, $15 to $40.
+Every fix is a one-time payment covered by the 30-day Fix Guarantee.
+
+## Answers
+- [Why is my custom GPT not following its instructions?](https://agent-er.ai/answers/custom-gpt-not-following-instructions.html)
+- [Why is my custom GPT not using its knowledge files?](https://agent-er.ai/answers/custom-gpt-not-using-knowledge-files.html)
+- [Why is my Claude project not following its instructions?](https://agent-er.ai/answers/claude-project-not-following-instructions.html)
+- [Why does ChatGPT forget what I told it earlier in the same chat?](https://agent-er.ai/answers/chatgpt-forgets-earlier-in-conversation.html)
+- [Why is my n8n AI agent not using its tools?](https://agent-er.ai/answers/n8n-ai-agent-not-using-tools.html)
+
+## Industries
+- [AI agents for financial advisors](https://agent-er.ai/financial-advisors.html): fixes and builds designed with FINRA and broker-dealer rules in mind. Not affiliated with FINRA or any firm, and not legal advice.
+
+## Policies
+- [Terms of Service](https://agent-er.ai/terms.html)
+- [Privacy Policy](https://agent-er.ai/privacy.html)
+- Contact: rhett.calder@mail.grokbot.com

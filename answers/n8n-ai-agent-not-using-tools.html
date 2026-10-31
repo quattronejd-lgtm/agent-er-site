@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why is my n8n AI agent not using its tools? | Agent ER</title>
+<meta name="description" content="An n8n AI Agent that skips its tools usually has a model, prompt, or workflow design problem. Here is how to make it reliable.">
+<link rel="canonical" href="https://agent-er.ai/answers/n8n-ai-agent-not-using-tools.html">
+<meta name="theme-color" content="#6B5DD3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Agent ER">
+<meta property="og:url" content="https://agent-er.ai/answers/n8n-ai-agent-not-using-tools.html">
+<meta property="og:title" content="Why is my n8n AI agent not using its tools?">
+<meta property="og:description" content="An n8n AI Agent that skips its tools usually has a model, prompt, or workflow design problem. Here is how to make it reliable.">
+<meta property="og:image" content="https://agent-er.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>.legal{max-width:760px}.legal h2{margin-top:32px;font-size:1.3rem}.legal p,.legal li{line-height:1.6}.legal .answer{font-size:1.1rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my n8n agent work sometimes and not other times?", "acceptedAnswer": {"@type": "Answer", "text": "The agent chooses whether to call a tool each time, so the same request can go either way. Moving required steps out of the agent makes the workflow predictable."}}, {"@type": "Question", "name": "Which model works best with n8n tools?", "acceptedAnswer": {"@type": "Answer", "text": "Results vary by model and by version, so test with your own workflow. Users consistently report that larger hosted models call tools more reliably than small local models."}}, {"@type": "Question", "name": "Can an n8n agent get stuck in a loop?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Retries and high iteration limits can cause an agent to repeat a failing step many times. Setting a low iteration limit and adding a stop condition prevents runaway costs."}}, {"@type": "Question", "name": "Do I need to know code to fix this?", "acceptedAnswer": {"@type": "Answer", "text": "Not always. Many fixes are settings and workflow changes inside n8n. If the workflow is complex, a second pair of eyes can save a lot of trial and error."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why is my n8n AI agent not using its tools?", "description": "An n8n AI Agent that skips its tools usually has a model, prompt, or workflow design problem. Here is how to make it reliable.", "datePublished": "2026-10-31", "author": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}, "publisher": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}}</script>
+</head>
+<body class="cs">
+<header class="site-header"><div class="wrap">
+<a class="cs-logo" href="/" aria-label="Agent ER home"><img src="/logo.svg" alt="Agent ER" width="176" height="48"></a>
+<a class="cs-badge" href="/#order">Open for orders</a>
+</div></header>
+<main><section><div class="wrap legal">
+<p class="note"><a href="/answers/">Agent ER answers</a></p>
+<h1>Why is my n8n AI agent not using its tools?</h1>
+<p class="answer"><b>Short answer:</b> An n8n AI Agent skips its tools when the model decides it can answer without them, which happens more with smaller models, vague tool descriptions, and long prompts. The fix is to use a model with strong tool calling, write a clear description for every tool, keep n8n updated, and split must-happen steps into their own part of the workflow so they never depend on the agent choosing them.</p>
+<h2>Why this happens</h2>
+<p>In n8n, the AI Agent node decides on its own whether to call a tool. If the model thinks it already knows the answer, it may write a reply instead of checking your sheet, calendar, or database.</p>
+<p>Smaller or local models are more likely to skip tools or return broken tool calls. n8n also released a fix in version 2.40.0 for an issue where some providers were not told to call a tool on the first step.</p>
+<p>When the agent quietly skips a tool, the workflow can still look successful, which is why people describe it as working half the time.</p>
+<h2>How to fix it, step by step</h2>
+<ol>
+<li>Update n8n to a current version.</li>
+<li>Switch the agent to a model known for reliable tool calling and test again.</li>
+<li>Give each tool a clear name and a one-sentence description of exactly when to use it.</li>
+<li>Shorten the system message so the tool rules are easy to find.</li>
+<li>Turn on intermediate steps so you can see whether a tool was actually called.</li>
+<li>If a step must always happen, like looking up inventory, move it out of the agent and run it as a normal node before the agent replies.</li>
+<li>Add a check before any email or message goes out, so a reply without real data gets stopped.</li>
+<li>Set a low maximum number of iterations and avoid automatic retries that could loop and use up API credits.</li>
+</ol>
+<h2>Common questions</h2>
+<h3>Why does my n8n agent work sometimes and not other times?</h3>
+<p>The agent chooses whether to call a tool each time, so the same request can go either way. Moving required steps out of the agent makes the workflow predictable.</p>
+<h3>Which model works best with n8n tools?</h3>
+<p>Results vary by model and by version, so test with your own workflow. Users consistently report that larger hosted models call tools more reliably than small local models.</p>
+<h3>Can an n8n agent get stuck in a loop?</h3>
+<p>Yes. Retries and high iteration limits can cause an agent to repeat a failing step many times. Setting a low iteration limit and adding a stop condition prevents runaway costs.</p>
+<h3>Do I need to know code to fix this?</h3>
+<p>Not always. Many fixes are settings and workflow changes inside n8n. If the workflow is complex, a second pair of eyes can save a lot of trial and error.</p>
+<h2>Still stuck?</h2>
+<p>If your n8n agent still skips steps or loops, we can diagnose the workflow. If you are not sure which fix fits your setup, see every option or email us. The <b>Harness Fix</b> is $42, one time, and covered by the 30-day Fix Guarantee. You upload your agent files, we find what is wrong, and you get a Fix Wizard that walks you through the repair.</p>
+<p><a class="btn btn-primary" href="https://buy.stripe.com/4gMeVddaA5Dheo9bs3cMM06">Get the Harness Fix for $42</a> <a class="btn" href="/#order">See every fix</a></p>
+</div></section></main>
+<footer class="site-footer"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 1024 1024" aria-hidden="true"><rect width="1024" height="1024" rx="240" fill="#6B5DD3"/><path d="M176 548 L318 548 L392 404 L512 668 L848 330" fill="none" stroke="#FFFFFF" stroke-width="108" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agent ER</span></a>
+<div>agent-er.ai. Part of the Quattrone Brands family. <a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="https://x.com/agenterfix" rel="noopener">Follow us on X</a></div>
+</div></footer>
+</body>
+</html>
