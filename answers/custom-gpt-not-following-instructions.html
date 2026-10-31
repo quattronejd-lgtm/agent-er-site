@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why is my custom GPT not following instructions? | Agent ER</title>
+<meta name="description" content="A custom GPT usually ignores its instructions because they are too long, contradict each other, or live in a knowledge file instead of the Instructions box. Here is how to fix it.">
+<link rel="canonical" href="https://agent-er.ai/answers/custom-gpt-not-following-instructions.html">
+<meta name="theme-color" content="#6B5DD3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Agent ER">
+<meta property="og:url" content="https://agent-er.ai/answers/custom-gpt-not-following-instructions.html">
+<meta property="og:title" content="Why is my custom GPT not following instructions?">
+<meta property="og:description" content="A custom GPT usually ignores its instructions because they are too long, contradict each other, or live in a knowledge file instead of the Instructions box. Here is how to fix it.">
+<meta property="og:image" content="https://agent-er.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>.legal{max-width:760px}.legal h2{margin-top:32px;font-size:1.3rem}.legal p,.legal li{line-height:1.6}.legal .answer{font-size:1.1rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why did my custom GPT suddenly get worse?", "acceptedAnswer": {"@type": "Answer", "text": "The most common cause is a change to the model behind it. When OpenAI updates the model, the same instructions can be read differently. Shortening and clarifying your instructions, then testing in a fresh chat, usually brings it back in line."}}, {"@type": "Question", "name": "Is there a limit on how long custom GPT instructions can be?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Instructions box has a character limit, and long instructions are also harder for the GPT to follow consistently. Keeping your rules short and specific works better than adding more text."}}, {"@type": "Question", "name": "Should I put my rules in a knowledge file to save space?", "acceptedAnswer": {"@type": "Answer", "text": "No. Knowledge files are searched only when a question seems related, so rules stored there may not be read. Put rules in the Instructions box and use knowledge files for facts like prices, policies, and FAQs."}}, {"@type": "Question", "name": "Will typing my instructions in ALL CAPS help?", "acceptedAnswer": {"@type": "Answer", "text": "It rarely fixes the real problem. Clear, specific rules that do not contradict each other work better than shouting the same vague rule louder."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why is my custom GPT not following its instructions?", "description": "A custom GPT usually ignores its instructions because they are too long, contradict each other, or live in a knowledge file instead of the Instructions box. Here is how to fix it.", "datePublished": "2026-10-31", "author": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}, "publisher": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}}</script>
+</head>
+<body class="cs">
+<header class="site-header"><div class="wrap">
+<a class="cs-logo" href="/" aria-label="Agent ER home"><img src="/logo.svg" alt="Agent ER" width="176" height="48"></a>
+<a class="cs-badge" href="/#order">Open for orders</a>
+</div></header>
+<main><section><div class="wrap legal">
+<p class="note"><a href="/answers/">Agent ER answers</a></p>
+<h1>Why is my custom GPT not following its instructions?</h1>
+<p class="answer"><b>Short answer:</b> A custom GPT usually stops following its instructions for one of three reasons: the instructions are long or contradict each other, the important rules were put in a knowledge file instead of the Instructions box, or a model update changed how the GPT reads them. The fix is to move every must-follow rule into the Instructions box, cut it down to a short list of clear rules, and test it in a fresh chat.</p>
+<h2>Why this happens</h2>
+<p>The Instructions box is the only place a custom GPT reads on every single reply. Knowledge files are searched only when a question seems to need them, so a rule hidden in a file is easy for the GPT to miss.</p>
+<p>Instructions also tend to grow over time. Each time something goes wrong, people add another line. After a while, two lines quietly disagree, and the GPT splits the difference instead of following either one.</p>
+<p>Finally, OpenAI updates the models behind custom GPTs. When that happens, a GPT that worked well can start acting differently even though you did not change anything.</p>
+<h2>How to fix it, step by step</h2>
+<ol>
+<li>Copy your current instructions into a separate document so you have a safe backup before you change anything.</li>
+<li>Read every line and delete any rule that repeats or contradicts another rule.</li>
+<li>Rewrite vague rules so they are pass or fail. For example, change "be concise" to "keep every answer under 150 words."</li>
+<li>Move any rule the GPT must always follow out of your knowledge files and into the Instructions box.</li>
+<li>Start the instructions by telling the GPT directly who it is and what its job is, such as "You are a booking assistant for a hair salon."</li>
+<li>Save, open a brand new chat with the GPT, and test it with three or four real questions your customers or clients ask.</li>
+<li>If it still drifts, try pasting the same instructions into a newly created GPT. Some builders report this clears up odd behavior after a model update.</li>
+</ol>
+<h2>Common questions</h2>
+<h3>Why did my custom GPT suddenly get worse?</h3>
+<p>The most common cause is a change to the model behind it. When OpenAI updates the model, the same instructions can be read differently. Shortening and clarifying your instructions, then testing in a fresh chat, usually brings it back in line.</p>
+<h3>Is there a limit on how long custom GPT instructions can be?</h3>
+<p>Yes. The Instructions box has a character limit, and long instructions are also harder for the GPT to follow consistently. Keeping your rules short and specific works better than adding more text.</p>
+<h3>Should I put my rules in a knowledge file to save space?</h3>
+<p>No. Knowledge files are searched only when a question seems related, so rules stored there may not be read. Put rules in the Instructions box and use knowledge files for facts like prices, policies, and FAQs.</p>
+<h3>Will typing my instructions in ALL CAPS help?</h3>
+<p>It rarely fixes the real problem. Clear, specific rules that do not contradict each other work better than shouting the same vague rule louder.</p>
+<h2>Still stuck?</h2>
+<p>If you have tried these steps and your custom GPT still will not behave, we can look at it for you. The <b>Virtual Cloud Fix</b> is $15, one time, and covered by the 30-day Fix Guarantee. You upload your agent files, we find what is wrong, and you get a Fix Wizard that walks you through the repair.</p>
+<p><a class="btn btn-primary" href="https://buy.stripe.com/3cI3cv7Qgc1F4NzgMncMM03">Get the Virtual Cloud Fix for $15</a> <a class="btn" href="/#order">See every fix</a></p>
+</div></section></main>
+<footer class="site-footer"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 1024 1024" aria-hidden="true"><rect width="1024" height="1024" rx="240" fill="#6B5DD3"/><path d="M176 548 L318 548 L392 404 L512 668 L848 330" fill="none" stroke="#FFFFFF" stroke-width="108" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agent ER</span></a>
+<div>agent-er.ai. Part of the Quattrone Brands family. <a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="https://x.com/agenterfix" rel="noopener">Follow us on X</a></div>
+</div></footer>
+</body>
+</html>

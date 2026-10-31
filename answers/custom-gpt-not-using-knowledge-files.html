@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why is my custom GPT not using its knowledge files? | Agent ER</title>
+<meta name="description" content="A custom GPT searches its knowledge files only when a question seems to need them. Here is how to get it to use your files and stop making things up.">
+<link rel="canonical" href="https://agent-er.ai/answers/custom-gpt-not-using-knowledge-files.html">
+<meta name="theme-color" content="#6B5DD3">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Agent ER">
+<meta property="og:url" content="https://agent-er.ai/answers/custom-gpt-not-using-knowledge-files.html">
+<meta property="og:title" content="Why is my custom GPT not using its knowledge files?">
+<meta property="og:description" content="A custom GPT searches its knowledge files only when a question seems to need them. Here is how to get it to use your files and stop making things up.">
+<meta property="og:image" content="https://agent-er.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>.legal{max-width:760px}.legal h2{margin-top:32px;font-size:1.3rem}.legal p,.legal li{line-height:1.6}.legal .answer{font-size:1.1rem}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does a custom GPT read every file every time?", "acceptedAnswer": {"@type": "Answer", "text": "No. It searches the files for relevant passages based on the question. That is why clear file names and instructions that point to specific files make such a big difference."}}, {"@type": "Question", "name": "Why does my GPT say it used my file when it did not?", "acceptedAnswer": {"@type": "Answer", "text": "The GPT can produce a confident answer that sounds like it came from your files. Asking it to name or quote the file it used makes it much easier to catch when it is guessing."}}, {"@type": "Question", "name": "What file type works best for knowledge files?", "acceptedAnswer": {"@type": "Answer", "text": "Plain, well organized text is the easiest for the GPT to search. Many builders report better results with text or markdown files than with long scanned PDFs."}}, {"@type": "Question", "name": "Can I stop my GPT from making things up?", "acceptedAnswer": {"@type": "Answer", "text": "You cannot remove the risk completely, but you can reduce it a lot by telling the GPT to answer only from its files and to say when it does not know."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Why is my custom GPT not using its knowledge files?", "description": "A custom GPT searches its knowledge files only when a question seems to need them. Here is how to get it to use your files and stop making things up.", "datePublished": "2026-10-31", "author": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}, "publisher": {"@type": "Organization", "name": "Agent ER", "url": "https://agent-er.ai/"}}</script>
+</head>
+<body class="cs">
+<header class="site-header"><div class="wrap">
+<a class="cs-logo" href="/" aria-label="Agent ER home"><img src="/logo.svg" alt="Agent ER" width="176" height="48"></a>
+<a class="cs-badge" href="/#order">Open for orders</a>
+</div></header>
+<main><section><div class="wrap legal">
+<p class="note"><a href="/answers/">Agent ER answers</a></p>
+<h1>Why is my custom GPT not using its knowledge files?</h1>
+<p class="answer"><b>Short answer:</b> A custom GPT does not read all of its knowledge files on every reply. It searches them for passages that look relevant, so if your files are long, messy, or never mentioned in the instructions, the GPT often answers from its general training instead. The fix is to name each file in your instructions, tell the GPT exactly when to use it, and tell it to say so when the answer is not in the files.</p>
+<h2>Why this happens</h2>
+<p>When you upload files to a custom GPT, it does not memorize them. Each time someone asks a question, it pulls a few matching pieces from the files into the conversation. If nothing matches well, it falls back on what it already knows, which can sound confident and still be wrong.</p>
+<p>Large PDFs with tables, scanned pages, or mixed topics are harder to search. Short, clearly titled files are much easier for the GPT to find the right piece in.</p>
+<p>People also report that a GPT will sometimes say it used a knowledge file when it did not. That is why you want it to quote or name the file it used.</p>
+<h2>How to fix it, step by step</h2>
+<ol>
+<li>Split big documents into smaller files, one topic per file, with clear names like pricing.txt or return-policy.txt.</li>
+<li>Where you can, save files as plain text or markdown instead of scanned PDFs.</li>
+<li>In the Instructions box, list each file by name and say when to use it. For example, "For any pricing question, search pricing.txt."</li>
+<li>Add a fallback rule: "If the answer is not in the files, say you do not know and suggest contacting us."</li>
+<li>Ask the GPT to name the file it used at the end of each factual answer, at least while you are testing.</li>
+<li>Test with real questions in a fresh chat and check each answer against your actual files.</li>
+</ol>
+<h2>Common questions</h2>
+<h3>Does a custom GPT read every file every time?</h3>
+<p>No. It searches the files for relevant passages based on the question. That is why clear file names and instructions that point to specific files make such a big difference.</p>
+<h3>Why does my GPT say it used my file when it did not?</h3>
+<p>The GPT can produce a confident answer that sounds like it came from your files. Asking it to name or quote the file it used makes it much easier to catch when it is guessing.</p>
+<h3>What file type works best for knowledge files?</h3>
+<p>Plain, well organized text is the easiest for the GPT to search. Many builders report better results with text or markdown files than with long scanned PDFs.</p>
+<h3>Can I stop my GPT from making things up?</h3>
+<p>You cannot remove the risk completely, but you can reduce it a lot by telling the GPT to answer only from its files and to say when it does not know.</p>
+<h2>Still stuck?</h2>
+<p>If your GPT keeps ignoring your files or inventing answers, we can find out why. The <b>Virtual Cloud Fix</b> is $15, one time, and covered by the 30-day Fix Guarantee. You upload your agent files, we find what is wrong, and you get a Fix Wizard that walks you through the repair.</p>
+<p><a class="btn btn-primary" href="https://buy.stripe.com/3cI3cv7Qgc1F4NzgMncMM03">Get the Virtual Cloud Fix for $15</a> <a class="btn" href="/#order">See every fix</a></p>
+</div></section></main>
+<footer class="site-footer"><div class="wrap">
+<a class="brand" href="/"><svg viewBox="0 0 1024 1024" aria-hidden="true"><rect width="1024" height="1024" rx="240" fill="#6B5DD3"/><path d="M176 548 L318 548 L392 404 L512 668 L848 330" fill="none" stroke="#FFFFFF" stroke-width="108" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Agent ER</span></a>
+<div>agent-er.ai. Part of the Quattrone Brands family. <a href="/terms.html">Terms of Service</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="https://x.com/agenterfix" rel="noopener">Follow us on X</a></div>
+</div></footer>
+</body>
+</html>
